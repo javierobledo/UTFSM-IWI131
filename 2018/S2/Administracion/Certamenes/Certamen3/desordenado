@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return paisprobable
+mayor = 0
+def cualpais(palabras,modismos):
+for p,ppais in modismos.items():
+paisprobable = p
+cantp = len(palabras & ppais)
+if mayor < cantp:
+mayor = cantp
+
+
+
+
+
+archpais = open(pais+".csv","a")
+def lista_regalos(cartas):
+archpais.close()
+for c in cartas:
+p = p |set(l.strip().split())
+for l in arch:
+p = set()
+arch = open(c)
+archpais.write(nom+";"+reg+"\n")
+pais = cualpais(p,modismos)
+clinea = 0
+l = l.replace(",", "")
+nom = l.strip()
+l = l.replace(".", "")
+if clinea == 3:
+arch.close()
+clinea += 1
+reg = l.strip()
