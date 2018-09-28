@@ -1,3 +1,5 @@
+import sys, time
+
 def de_segundos_a_hora(segundos):
     h = str(segundos / 3600)
     m = str((segundos/60) % 60)
@@ -19,6 +21,8 @@ def de_hora_a_segundos(hora):
 tiempo = raw_input("Ingrese tiempo:")
 segundos = de_hora_a_segundos(tiempo)
 while segundos != 0:
-    print de_segundos_a_hora(segundos)
+    b = de_segundos_a_hora(segundos)
+    sys.stdout.write('\r' + b)
+    time.sleep(1)
     segundos -= 1
-print "00:00:00"
+sys.stdout.write('\r' + "00:00:00")
