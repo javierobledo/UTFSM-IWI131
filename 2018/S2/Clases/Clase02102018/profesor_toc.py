@@ -15,8 +15,8 @@ def primo(n):
 
 hora = raw_input("Ingrese hora:")
 while hora != "fin":
-    hora = raw_input("Ingrese hora:")
     if primo(cuantos_segundos(hora)):
         print "Las",hora,"es una hora segura"
     else:
         print "No salgas de tu casa!"
+    hora = raw_input("Ingrese hora:")
