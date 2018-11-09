@@ -1,0 +1,37 @@
+global h= 4000
+t s= 4000
+t n= 60
+t x= 1
+t y= 66
+t y= 6
+t z= 40
+global x= 1:6:40
+1:6:40
+global h= 3000
+t s= 3000
+t n= 60
+t x= 0
+t y= 50
+t y= 50
+t z= 0
+global x= 0:50:0
+0:50:0
+global h= 2000
+t s= 2000
+t n= 60
+t x= 0
+t y= 33
+t y= 33
+t z= 20
+global x= 0:33:20
+0:33:20
+global h= 1000
+t s= 1000
+t n= 60
+t x= 0
+t y= 16
+t y= 16
+t z= 40
+global x= 0:16:40
+0:16:40
+global h= 0

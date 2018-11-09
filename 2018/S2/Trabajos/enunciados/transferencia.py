@@ -1,11 +1,13 @@
-personas = {"1234567-8":"hol34as"}
-letras = "abcdefghijklmnopqrstuvwxyz"
-digitos = "0123456789"
+def f1(x,j=-1):
+    y = []
+    for i in range(j,-len(x)+j,j):
+        y.append(x[i])
+    return y
 
-def f1(rut):
+def digito_verificador(rut):
     suma = 0
     i=2
-    rutinverso = rut[::-1]
+    rutinverso = f1(rut)
     for digito in rutinverso:
         suma += int(digito)*i
         if i == 7:
@@ -20,26 +22,13 @@ def f1(rut):
         return str(d)
 
 
-
-def es_letra(simbolo):
-    return simbolo in letras
-
-def es_numero(simbolo):
-    return simbolo in digitos
-
 def rut_valido(rut):
     i = rut.index("-")
     rutsindigito = rut[:i]
     digito = rut[i+1:]
-    return f1(rutsindigito) == digito
+    return digito_verificador(rutsindigito) == digito
 
-def codificar_password(password):
-    return
-
-def decodificar_password(password):
-    return
-
-
+personas = {}
 rut = raw_input("Ingrese rut:")
 while rut != "0":
     while not rut_valido(rut):
@@ -47,11 +36,14 @@ while rut != "0":
         rut = raw_input("Ingrese rut:")
     password = raw_input("Password:")
     if rut in personas:
-        if decodificar_password(personas[rut]) == password:
+        if personas[rut] == password:
             print "Password correcto, puede ingresar al sistema"
         else:
             print "Password incorrecto!"
     else:
-        personas[rut] = codificar_password(password)
+        personas[rut] = password
         print "Persona ingresada correctamente"
     rut = raw_input("Ingrese rut:")
+print "Ruts en el sistema:"
+for rut in personas:
+    print rut
